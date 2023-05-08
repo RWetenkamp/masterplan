@@ -14,3 +14,5 @@ Grundlage des Projektes sind die Daten zu allen Studiengängen an deutschen Univ
 - [ ] Wissenschaftliches Schreiben
 - [ ] Publizieren
 
+## Website des Projektes
+https://masterplan.rwetenkamp.de
