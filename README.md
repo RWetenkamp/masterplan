@@ -16,4 +16,5 @@ Grundlage des Projektes sind die Daten zu allen Studiengängen an deutschen Univ
 
 ## Website des Projektes
 https://masterplan.rwetenkamp.de
+
 https://masterplan.rwetenkamp.de/geschichte
