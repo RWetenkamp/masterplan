@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            MASTERPLAN - Dein Weg zum passenden Informatik-Master!
+        </title>
+        <meta charset="UTF-8"/>
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="topline" class="horizontal">
+            <span class="logo">MASTERPLAN</span>
+            <div class="inline-form">
+                <select id="select_from" onchange="cngTo();">
+                    <option value="schule">
+                        Allgemeinbildende Schule
+                    </option>
+                    <option value="haw">
+                        HAW / Fachhochschule / DH
+                    </option>
+                    <option value="uni">
+                        Universität
+                    </option>
+                    <option value="berufsschule">
+                        Berufsschule
+                    </option>
+                </select>
+                <span class="arrow">➜</span>
+                <select id="select_to" onchange="cngTo();">
+                    <option value="schule">
+                        Allgemeinbildende Schule
+                    </option>
+                    <option value="haw">
+                        HAW / Fachhochschule / DH
+                    </option>
+                    <option value="uni">
+                        Universität
+                    </option>
+                    <option value="berufsschule">
+                        Berufsschule
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="horizontal primary" id="general">
+            <h2 id="selection"></h2>
+            <span id="startline"></span>
+        </div>
+        <div class="horizontal inverted hidden" id="privacy">
+            <h2>1 | Datenschutzbestimmungen</h2>
+            <p class="normal">
+                <b>Daten sind digitales Gold.</b> Wie reich Sie sind!<br><br>
+                In den folgenden Schritten in dieser Plattform können Sie verschiedene Daten angeben. Diese Daten ermöglichen es uns, Ihnen passendere Studiengänge und Angebote anzuzeigen.<br>
+                Gleichzeitig gewinnen wir aus diesen Daten Erkenntnisse über die Durchlässigkeit des deutschen Hochschulbildungssystems. Diese Daten werden für Forschung genutzt.<br><br>
+                Mir ist es sehr wichtig, dass Sie vollumfänglich über die Verwendung Ihrer Daten aufgeklärt sind.<br>
+                <details>
+                    <summary>
+                        Welche Daten werden verarbeitet?
+                    </summary>
+                    Diese Plattform verarbeitet ausschließlich folgende Daten auf Grundlage Ihrer Angaben:
+                    <ul>
+                        <li>
+                            Bisherige Hochschule
+                        </li>
+                        <li>
+                            Bisheriger Studiengang und Inhalte desselbigen
+                        </li>
+                        <li>
+                            Abschlussnote, sofern Sie diese angeben
+                        </li>
+                        <li>
+                            Sprachkenntnisse, sofern Sie diese angeben
+                        </li>
+                        <li>
+                            Wohnort / -region, sofern Sie diese angeben
+                        </li>
+                        <li>
+                            Einstellungen und Befindlichkeiten zur Studienwahl und Karriereplanung, sofern Sie diese angeben
+                        </li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>
+                        Wie werden meine Daten verarbeitet?
+                    </summary>
+                    Wir speichern Ihre Daten zu Forschungszwecken. <bR>
+                    Ziel ist es, aus der Gesamtheit der erhobenen Daten Rückschlüsse auf die Durchlässigkeit des Hochschulbildungssystems zu gewinnen.<br><bR>
+                    <b>Die Daten sind jederzeit vollständig anonymisiert und lassen keine Rückschlüsse auf Ihre Person zu!</b> <br><br>
+                    Sollten Forschungsergebnisse publiziert werden, werden die Daten lediglich in ihrer Grundgesamtheit veröffentlicht, sodass keine einzelnen Nutzenden unterschieden werden können.<br>
+                    Die Speicherung Ihrer Daten erfolgt ausschließlich auf deutschen Servern und wird nach Abschluss des Forschungsprojektes, spätestens jedoch am 31.12.2024, beendet. 
+                </details>
+                <details>
+                    <summary>
+                        Welche Rechte habe ich?
+                    </summary>
+                    Da die verarbeiteten Daten vollständig anobymisiert sind, fällt die Datenverarbeitung nicht in den Geldtungsbereich der DSGVO. <bR>
+                    Gleichwohl können Sie jederzeit eine Löschung der Daten beauftragen, in dem Sie uns bitte alle Daten mitteilen, die gelöscht werden sollen.<br>
+                    Uns ist es aufgrund der vollständigen Anonymisierung nicht möglich, Ihre Daten einer Person und insbesondere nicht Ihnen zuzuordnen.<bR><bR>
+                    Wenden Sie sich gerne an: <br><bR>
+                    Roman Wetenkamp<br>info (at) rwetenkamp.de<br><br>
+                    Vielen Dank!
+                </details>
+            </p>
+            <button class="button" onclick="proceed('privacy-accepted');">> Akzeptieren und Fortfahren</button>
+        </div>
+        <div class="horizontal inverted hidden" id="presurvey">
+            <h2>2 | Eingangsfragebogen</h2>
+            <p class="normal">
+                Starten wir nun in die Suche nach den passendsten Studiengängen für Sie!<br>
+                Grau hinterlegte Fragen sind optional (verbessern jedoch die Filterung).<br>
+            </p>
+            <br>
+            <div class="question">
+                <span class="">An welcher Hochschule haben Sie studiert?</span><br>
+                <input type="text" placeholder="... z.B. FH Bielefeld" id="institution" onchange="loadKnown('universities');">
+                <br><br>
+                <div id="knownInstitutions">
+
+                </div>
+                <button class="button hidden" id="unselectBtn" onclick="unselect('institution');">> Ändern</button>
+            </div>
+            <br><br>
+            <div class="question">
+                <span class="" >Wie heißt der Studiengang dieses Abschlusses?</span><br>
+                <input type="text" id="programInput" placeholder="... z.B. Angewandte Informatik" onfocus="loadKnown('programs');" disabled="true">
+                <br><br>
+                <div id="knownPrograms">
+
+                </div>
+                <button class="button hidden" id="unselectBtn2" onclick="unselect('program');">> Ändern</button>
+            </div><br><br>
+            <div class="question voluntarily">
+                <span class="">Welche Abschlussnote haben Sie erreicht?</span><br>
+                <input type="number" id="grade" placeholder="... z. B. 2.5">
+            </div>
+            <br>
+            <button class="button" onclick="proceed('presurvey-completed');">> Speichern und Fortfahren</button>
+        </div>
+        <div class="horizontal inverted hidden" id="programDetails">
+            <h2>3 | Details Ihres Bachelor-Studiengangs | Anfrage <b id="codeB"></b></h2>
+            <p class="normal">
+                <b>Jetzt geht es ans Eingemachte!</b><br>
+                Sie haben angegeben, an der Hochschule <b id="institutionB"></b> im Studiengang <b id="programB"></b> studiert zu haben.<br>
+                Zu diesem Studiengang liegen uns leider noch keine Daten vor.<br><br>
+                Bitte geben Sie die Module ein, die Sie im Rahmen Ihres Studiums belegt haben.
+            </p>
+            <br>
+            <div class="question">
+                <input type="text" placeholder="... z.B. Algorithmen und Datenstrukturen" id="module" onchange="loadKnown('modules');">
+                <br><br>
+                <div id="knownModules">
+
+                </div>
+                <input type="number" placeholder="ECTS-Punkte" id="ects">
+                <br><br>
+                <button class="button hidden" id="unselectBtn" onclick="addModule();">> Hinzufügen</button>
+                <br><br>
+                <div id="addedModules">
+                    
+                </div>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+body {
+    margin: 0;
+    color: black;
+}
+#topline {
+    margin: 0;
+    color: blue;
+    vertical-align: middle;
+    background-color: white;
+}
+.horizontal {
+    margin: 0;
+    padding: 4vh 3vw 4vh 3vw;
+    height: max-content;
+}
+.primary {
+    background-color: blue;
+    color: white;
+}
+.inverted {
+    color: blue;
+    background-color: white;
+}
+.logo {
+    font-size: 2em;
+    font-weight: 800;
+    float: left;
+    display: inline;
+    padding-top: 2vh;
+}
+.inline-form {
+    padding-left: 10vw;
+    text-align: right;
+}
+.inline-form select {
+    font-size: 1.5em;
+    color: inherit;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid gray;
+    padding: 1%;
+}
+.arrow {
+    padding-left: 2.5vw; 
+    padding-right: 2.5vw;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+#startline {
+    font-size: 1.4em;
+}
+.normal, summary {
+    color: black;
+    font-size: 1.2em;
+}
+summary {
+    padding-top: 1vh;
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+details {
+    color: black;
+    border: 2px solid blue;
+    padding: 1vh;
+    margin-bottom: 1vw;
+}
+.hidden {
+    display: none;
+}
+.button {
+    background-color: blue;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    border: 2px solid blue;
+    color: white;
+    font-size: 1.1em;
+}
+.button:hover {
+    color: blue;
+    background-color: white;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+.question {
+    font-size: 1.15em;
+    padding-bottom: 2vw;
+    padding-right: 1.5vw;
+    display: inline-block;
+}
+.question select, .question input {
+    padding: 0.5vw;
+    font-size: 1.2em;
+    color: black;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid gray;
+    padding: 1%;
+    width: 28vw;
+}
+.voluntarily {
+    color: gray;
+    font-style: italic;
+}
+
+.knownUni {
+    cursor: pointer;
+    padding: 0.5vw;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
+    display: inline-block;
+    background-color: rgb(241, 246, 253);
+}

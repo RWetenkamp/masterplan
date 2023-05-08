@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            MASTERPLAN - Dein Weg zum passenden Informatik-Master!
+        </title>
+        <meta charset="UTF-8"/>
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="topline" class="horizontal">
+            <span class="logo">MASTERPLAN</span>
+            <div class="inline-form part">
+                Datenbank
+            </div>
+        </div>
+        <div class="horizontal primary" id="general">
+            <h2 id="selection">Informatik-Masterstudiengänge<br>an deutschen Universitäten</h2>
+            <span id="startline">Zulassungsvoraussetzungen</span>
+        </div>
+        <div class="horizontal inverted" id="presurvey">
+            <h2>Suche</h2>
+            <p class="normal">
+                Diese Datenbank verzeichnet Masterstudiengänge aus dem Fachgebiet der Informatik an deutschen Universitäten. <br>
+                Studiengänge an HAWs (Hochschulen für angewandte Wissenschaften) werden sukzessive ergänzt.<br><br>
+                Sie können sich mit einem Klick auf "Suchen" alle Studiengänge anzeigen lassen oder Sie grenzen Ihre Suche durch einen Begriff und/oder die Angabe von Filtern ein.
+                <br><br>
+                Die einzelnen Zulassungsvoraussetzungen eines Studiengangs finden Sie, nachdem Sie einen entsprechenden Studiengang angeklickt haben.<br>
+                Sollten innerhalb einer Voraussetzung mehrere Module aufgelistet sein, so handelt es sich dabei um Alternativen.
+            </p>
+            <br>
+            <div class="question">
+                <span class="">Suchbegriff</span><br>
+                <input type="text" placeholder="... z.B. Stadt, Uni, Name" id="query">
+            </div>
+            <br>
+            <details>
+                <summary>
+                    Filter    
+                </summary>
+            
+                <div class="question">
+                    <span class="">Bundesländer</span><br>
+                    <input type="text" placeholder="... z.B. Sachsen" id="states" onfocus="loadKnown('states');" >
+                    <br><br>
+                    <div id="knownStates">
+
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="" >Abschlusstyp</span><br>
+                    <input type="text" id="degrees" placeholder="... z.B. M.Sc." onfocus="loadKnown('degrees');">
+                    <br><br>
+                    <div id="knownDegrees">
+
+                    </div>
+                </div>
+                <div class="question">
+                    <span class="" >Themengebiete</span><br>
+                    <input type="text" id="topics" placeholder="... z.B. IT-Sicherheit" onfocus="loadKnown('topics');">
+                    <br><br>
+                    <div id="knownTopics">
+
+                    </div>
+                </div>
+            </details>
+            <br>
+            <button class="button" onclick="search();">> Suchen</button>
+        </div>
+        <div class="horizontal inverted hidden" id="results">
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,196 @@
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+#resulttable tr th {
+    color: white;
+    background-color: blueviolet;
+    padding: 0.2vw;
+}
+#resulttable {
+    width: 100%;
+}
+
+#resulttable tr {
+    border-bottom: 1px solid blueviolet;
+    padding: 0.2vw;
+}
+#resulttable tr:hover {
+    background-color:rgb(241, 246, 253);
+    cursor: pointer;
+}
+#resulttable tr td {
+    padding: 0.3vw;
+    border-bottom: 1px solid blueviolet;
+}
+
+body {
+    margin: 0;
+    color: black;
+}
+#topline {
+    margin: 0;
+    color: blueviolet;
+    vertical-align: middle;
+    background-color: white;
+}
+.horizontal {
+    margin: 0;
+    padding: 2vh 3vw 4vh 3vw;
+    height: max-content;
+}
+.primary {
+    background-color: blueviolet;
+    color: white;
+}
+.inverted {
+    color: blueviolet;
+    background-color: white;
+}
+.logo {
+    font-size: 2em;
+    font-weight: 800;
+    float: left;
+    display: inline;
+    padding-top: 2vh;
+}
+.inline-form {
+    padding-left: 10vw;
+    text-align: right;
+}
+.inline-form select, .part {
+    font-size: 1.5em;
+    color: inherit;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 1%;
+}
+.arrow {
+    padding-left: 2.5vw; 
+    padding-right: 2.5vw;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+#startline {
+    font-size: 1.4em;
+}
+.normal, summary {
+    color: black;
+    font-size: 1.2em;
+}
+summary {
+    padding-top: 1vh;
+    font-weight: 600;
+    padding-bottom: 2vh;
+    background-color: blueviolet;
+    color: white;
+    padding: 1.3vh;
+    margin-bottom: 1vw;
+}
+details {
+    padding: 1vh;
+    margin-bottom: 1vw;
+}
+.hidden {
+    display: none;
+}
+.button {
+    background-color: blueviolet;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    border: 2px solid blueviolet;
+    color: white;
+    font-size: 1.1em;
+}
+.button:hover {
+    color: blueviolet;
+    background-color: white;
+    border: 2px solid blueviolet;
+    cursor: pointer;
+}
+.question {
+    font-size: 1.15em;
+    padding-bottom: 2vw;
+    padding-right: 1.5vw;
+    display: inline-block;
+}
+.question select, .question input {
+    padding: 0.5vw;
+    font-size: 1.2em;
+    color: black;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid gray;
+    padding: 1%;
+    width: 28vw;
+}
+.voluntarily {
+    color: gray;
+    font-style: italic;
+}
+
+.knownUni {
+    cursor: pointer;
+    padding: 0.5vw;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
+    display: inline-block;
+    background-color: rgb(241, 246, 253);
+}
+
+.result-collapsed {
+    padding: 1.5vh;
+    background-color:rgb(241, 246, 253);
+    margin-bottom: 2vh;
+    cursor: pointer;
+}
+
+.result-collapsed:hover {
+    background-color: rgb(241, 253, 248);
+}
+.result-collapsed #id {
+    min-width: 3.5vw;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 100;
+
+}
+.result-collapsed #title {
+    font-size: 1.5em;
+    padding-left: 0;
+    margin-left: 0;
+    font-weight: 800;
+}
+.result-collapsed #institution {
+    font-size: 1.5em;
+}
+.result-collapsed #language {
+    font-size: 1.5em;
+    right: 50vw;
+}
+
+.requirements {
+    margin-left: 3.8vw;
+    margin-top: 5vh;
+}
+.requ-field {
+    background-color: white;
+    padding: 0.5vw;
+    min-height: 2.5vh;
+    margin-bottom: 0.7vh;
+    display: inline-block;
+    min-width: 3vw;
+    vertical-align: top;
+
+}
+#requ-name {
+    width: 20vw;
+    font-weight: 600;
+}
+
+#requ-type {
+    width: 10vw;
+}
